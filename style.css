@@ -303,3 +303,100 @@ footer {
         width: 85%;
     }
 }
+
+/* ... (previous CSS) ... */
+
+.add-to-cart-btn:disabled {
+    background-color: #555 !important;
+    color: #999 !important;
+    cursor: not-allowed;
+    transform: skewX(0deg) scale(0.95) !important;
+}
+
+/* Checkout Section Styles */
+.checkout-section {
+    background-color: #e6e6fa; /* Lavender - slightly unsettling for a checkout */
+    padding: 30px 20px;
+    margin: 30px auto;
+    border: 3px dashed #4b0082; /* Indigo */
+    max-width: 700px;
+    box-shadow: 0 0 15px rgba(128, 0, 128, 0.5) inset, 5px 5px 0px #9370db; /* MediumPurple */
+    transform: rotate(-0.3deg);
+}
+
+.checkout-section .section-title {
+    color: #4b0082;
+    text-shadow: 1px 1px #dda0dd; /* Plum */
+}
+
+#checkout-form .form-group {
+    margin-bottom: 20px;
+    transform-style: preserve-3d; /* For child transforms */
+}
+
+#checkout-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.1em;
+    color: #333;
+    transform: translateX(-2px) rotate(0.2deg);
+}
+
+#checkout-form input[type="text"],
+#checkout-form input[type="password"],
+#checkout-form select {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #8a2be2; /* BlueViolet */
+    background-color: #f8f8ff; /* GhostWhite */
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    box-sizing: border-box; /* Important for width calculation */
+    transition: all 0.2s ease-in-out;
+}
+
+#checkout-form input[type="text"]:focus,
+#checkout-form input[type="password"]:focus,
+#checkout-form select:focus {
+    outline: none;
+    border-color: #ff00ff; /* Magenta */
+    box-shadow: 0 0 10px #ff00ff, 0 0 5px #da70d6 inset; /* Orchid */
+    transform: scale(1.02) rotate(-0.1deg);
+}
+
+#checkout-form input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+#checkout-form input[type="checkbox"] + label {
+    display: inline;
+    font-family: 'VT323', monospace;
+    font-size: 1em;
+}
+
+#checkout-form #incantation { /* Special styling for the incantation field */
+    caret-color: #ff00ff; /* Magenta cursor */
+    text-shadow: 1px 1px 2px #dda0dd;
+}
+
+#checkout-message {
+    padding: 15px;
+    border: 2px dotted;
+    text-align: center;
+}
+
+#checkout-message.success {
+    background-color: #90ee90aa; /* LightGreen, slightly transparent */
+    color: #006400; /* DarkGreen */
+    border-color: #006400;
+}
+
+#checkout-message.error {
+    background-color: #ffb6c1aa; /* LightPink, slightly transparent */
+    color: #8b0000; /* DarkRed */
+    border-color: #8b0000;
+}
+
+
+/* ... (rest of CSS, including .modal, .glitch-text, etc.) ... */

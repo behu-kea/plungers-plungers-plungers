@@ -47,7 +47,62 @@
                 <button class="add-to-cart-btn">Listen Closely...</button>
             </div>
         </div>
+        <button id="proceed-to-checkout-btn" class="call-now-button" style="display: none; margin-top: 30px; background-color: #4CAF50; transform: rotate(0.5deg);">Proceed to Questionable Checkout (<span id="cart-count">0</span> items)</button>
     </section>
+
+    <!-- NEW CHECKOUT SECTION -->
+    <section id="checkout-section" class="checkout-section" style="display: none;">
+        <h2 class="section-title" style="transform: rotate(-0.8deg) skewX(-2deg);">Finalize Your Descent</h2>
+        <form id="checkout-form">
+            <div class="form-group" style="transform: rotate(0.3deg);">
+                <label for="true-name" class="glitch-text">Your True Name (for arcane binding purposes):</label>
+                <input type="text" id="true-name" name="true-name" required style="transform: skewX(1deg);">
+            </div>
+
+            <div class="form-group" style="transform: rotate(-0.2deg) translateX(-3px);">
+                <label for="realm" class="glitch-text">Realm of Residence (e.g., Earth C-137, The Yawning Abyss):</label>
+                <input type="text" id="realm" name="realm" required style="width: 95%;">
+            </div>
+
+            <div class="form-group" style="transform: rotate(0.5deg) translateX(2px);">
+                <label for="psychic-imprint" class="glitch-text">Preferred Method of Psychic Imprint (for delivery confirmation):</label>
+                <select id="psychic-imprint" name="psychic-imprint" required style="font-family: 'Special Elite', cursive; transform: rotate(-0.5deg);">
+                    <option value="">Select your vibe...</option>
+                    <option value="telepathy">Telepathy (standard)</option>
+                    <option value="carrier-pigeon">Carrier Pigeon (prone to existential dread)</option>
+                    <option value="dream-message">Dream Message (side effects: prophetic nightmares)</option>
+                    <option value="omen">Ominous Omen (interpret at own risk)</option>
+                </select>
+            </div>
+
+            <div class="form-group" style="transform: rotate(-0.4deg);">
+                <label for="sacrifice" class="glitch-text">Sacrifice Offered (currency of the void):</label>
+                <select id="sacrifice" name="sacrifice" required style="background-color: #f0e68c; transform: skewY(1deg);">
+                    <option value="">Choose your tribute...</option>
+                    <option value="sock">A Single Sock (left only, slightly damp)</option>
+                    <option value="caps">Three Slightly Used Bottle Caps (non-returnable)</option>
+                    <option value="laughter">Your Second-Born's First Laughter (ethereally bottled)</option>
+                    <option value="sanity-sliver">A Sliver of Your Own Sanity (non-refundable)</option>
+                    <option value="unused-coupon">An Unused Coupon for a Hug</option>
+                </select>
+            </div>
+
+            <div class="form-group" style="transform: rotate(0.6deg) translateX(-1px);">
+                <label for="incantation" class="glitch-text">Secret Incantation (whisper thrice to seal):</label>
+                <input type="password" id="incantation" name="incantation" required placeholder="Klaatu... Barada... N... ?" style="font-family: 'Creepster', cursive; font-size: 1.3em; letter-spacing: 2px; border: 1px dotted #ff00ff;">
+            </div>
+
+            <div class="form-group" style="transform: rotate(-0.1deg);">
+                <input type="checkbox" id="time-construct" name="time-construct" required style="transform: scale(1.2) rotate(3deg);">
+                <label for="time-construct" class="glitch-text">I acknowledge that time is merely a suggestion & delivery may occur yesterday.</label>
+            </div>
+
+            <button type="submit" id="finalize-btn" class="call-now-button" style="background-color: #800080; transform: rotate(1.5deg) skewX(-3deg);">Finalize Transaction (and Seal Your Fate)</button>
+        </form>
+        <p id="checkout-message" class="glitch-text" style="margin-top: 20px; font-size: 1.2em; color: #ff0000; display: none;"></p>
+    </section>
+    <!-- END NEW CHECKOUT SECTION -->
+
 
     <section id="weird-features" class="weird-features-section">
         <h2 class="section-title" style="transform: rotate(-1.5deg) translateX(10px);">Extra Weirdness</h2>
