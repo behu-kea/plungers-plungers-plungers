@@ -1,0 +1,305 @@
+body {
+    font-family: 'VT323', monospace; /* Pixelated, retro feel */
+    background-color: #ded9d3; /* Muted, slightly off-putting beige from original image */
+    color: #333;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll from minor misalignments */
+}
+
+header {
+    background-color: #4a4a4a;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 3px dashed #ffcc00;
+    transform: rotate(-0.5deg) translateY(-5px);
+}
+
+.main-title {
+    font-family: 'Creepster', cursive; /* Spooky font */
+    font-size: 4em;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px #ff0000;
+    letter-spacing: 2px;
+    transform: skewX(-3deg);
+}
+
+.tagline {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #cccccc;
+    margin-top: -10px;
+    transform: rotate(0.2deg);
+}
+
+main {
+    padding: 15px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative; /* For button positioning */
+}
+
+#hero-image {
+    max-width: 80%;
+    height: auto;
+    border: 5px solid #000;
+    box-shadow: 5px 5px 0px #ffcc00, -5px -5px 0px #33ccff;
+    transform: rotate(1deg) scale(0.98);
+    transition: transform 0.3s ease-in-out;
+}
+#hero-image:hover {
+    transform: rotate(-0.5deg) scale(1.02);
+}
+
+.call-now-button {
+    font-family: 'Special Elite', cursive;
+    font-size: 2.5em;
+    padding: 10px 20px;
+    background-color: #ff4500; /* Orangey-red */
+    color: white;
+    border: 3px outset #ffA500;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    transform: rotate(-2deg) skewX(5deg);
+    transition: all 0.2s ease;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+.call-now-button:hover {
+    background-color: #ff6347;
+    transform: rotate(1deg) skewX(-2deg) scale(1.05);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.call-now-button:active {
+    transform: rotate(0deg) skewX(0deg) scale(0.95);
+    box-shadow: inset 2px 2px 3px rgba(0,0,0,0.4);
+}
+
+
+.section-title {
+    font-family: 'Creepster', cursive;
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #5a0000;
+    text-shadow: 1px 1px #ffddaa;
+}
+
+.product-section {
+    background-color: #cac5bd;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    border: 2px dotted #555;
+    transform: skewY(-0.5deg);
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Creates space between cards */
+}
+
+.product-card {
+    background-color: #f0eade;
+    border: 1px solid #8b0000; /* Dark red border */
+    padding: 15px;
+    width: calc(33.333% - 40px); /* Adjust for gap and padding */
+    min-width: 250px; /* Prevent cards from becoming too narrow */
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 3px 3px 0px #aaa, -2px -2px 0px #ccc inset;
+    transition: transform 0.3s ease-out, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.03) rotate(0.2deg) !important; /* Override inline for hover effect */
+    box-shadow: 5px 5px 5px #888, -3px -3px 3px #ddd inset;
+}
+
+.product-image {
+    max-width: 100%;
+    height: 150px; /* Fixed height for consistency */
+    object-fit: contain; /* Or cover, depending on desired image handling */
+    margin-bottom: 10px;
+    border: 2px dashed #333;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bouncy effect */
+}
+
+.product-card:hover .product-image {
+    transform: rotate(3deg) scale(1.1) translateY(-5px);
+}
+
+.product-description {
+    font-size: 0.95em;
+    color: #4b4b4b;
+    min-height: 80px; /* Ensure some space even if text is short */
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #006400; /* Dark green */
+    margin: 10px 0;
+}
+
+.add-to-cart-btn {
+    font-family: 'Special Elite', cursive;
+    background-color: #ffcc00; /* Yellow */
+    color: #333;
+    border: 2px solid #cc9900;
+    padding: 8px 15px;
+    cursor: crosshair; /* Weird cursor */
+    font-size: 1.1em;
+    transition: all 0.2s;
+    transform: skewX(3deg);
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ffd700;
+    color: #000;
+    transform: skewX(-3deg) scale(1.05);
+    box-shadow: 0 0 10px #ff00ff, 0 0 5px #00ffff; /* Neon glow */
+}
+
+.weird-features-section {
+    background-color: #b0c4de; /* Light steel blue - a bit off */
+    padding: 25px;
+    margin-top: 20px;
+    text-align: center;
+    border: 3px groove #888;
+    transform: rotate(0.7deg) translateY(5px);
+}
+
+#sanity-check-btn {
+    font-family: 'Special Elite', cursive;
+    background-color: #800080; /* Purple */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: help;
+    box-shadow: 0px 0px 15px rgba(255,0,255,0.5);
+    transition: transform 0.1s, background-color 0.5s;
+}
+#sanity-check-btn:hover {
+    background-color: #ff00ff; /* Magenta */
+    transform: scale(1.1) rotate(5deg);
+}
+#sanity-check-btn:active {
+    transform: scale(0.9) rotate(-5deg);
+}
+
+#sanity-message {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #2F4F4F; /* Dark slate gray */
+    font-style: italic;
+}
+
+#cursed-cursor-follower {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px dotted red;
+    border-radius: 50%;
+    position: fixed; /* Follows cursor */
+    pointer-events: none; /* So it doesn't interfere with clicks */
+    transition: transform 0.05s linear; /* Smooth-ish follow */
+    z-index: 9999;
+    opacity: 0.7;
+    transform: translate(-50%, -50%); /* Center on cursor */
+}
+
+
+footer {
+    background-color: #333;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    border-top: 4px ridge #555;
+    font-size: 0.9em;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px) grayscale(50%); /* Weird effect */
+}
+
+.modal-content {
+    font-family: 'Special Elite', cursive;
+    background-color: #fefefe;
+    color: #000;
+    margin: 15% auto;
+    padding: 30px;
+    border: 5px dashed #ff0000;
+    width: 60%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #00ffff;
+    transform: rotate(-1deg) scale(1.02);
+    animation: modalPulse 2s infinite alternate;
+}
+
+@keyframes modalPulse {
+    from { transform: rotate(-1deg) scale(1.02); }
+    to { transform: rotate(1deg) scale(1.05); }
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+    transform: rotate(5deg);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transform: rotate(-5deg) scale(1.2);
+}
+
+/* Glitch text effect placeholder - JS will handle actual glitch */
+.glitch-text {
+    position: relative;
+}
+
+/* Responsive adjustments - very basic */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3em;
+    }
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-card {
+        width: 80%;
+        margin-left: 0 !important; /* Override inline styles for responsiveness */
+        margin-top: 15px !important;
+        transform: rotate(0deg) !important; /* Reset rotation for stacked view */
+    }
+    .modal-content {
+        width: 85%;
+    }
+}
